@@ -39,6 +39,19 @@
         background-blend-mode: multiply;
       }
     </style>
+      <!-- Custom Color -->
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            themecolor: "#1DD100",
+          },
+        },
+      },
+    };
+  </script>
   </head>
   <body class="font-raleway">
     <header class="container w-11/12 mx-auto mt-8">
@@ -54,7 +67,7 @@
           <li><a href>Search</a></li>
         </div>
         <button
-          class="flex gap-2 items-center border-[1px] border-[#1dd10066] bg-[#1dd1001a] px-8 py-4 rounded-md text-[#1DD100] font-bold text-xl">
+          class="flex gap-2 items-center border-[1px] border-[#1dd10066] bg-[#1dd1001a] px-8 py-4 rounded-md text-themecolor font-bold text-xl">
           Bus<img src="./assets/icon/small-bus.svg" alt />
         </button>
       </nav>
@@ -65,7 +78,7 @@
         <div
           class="text-white w-3/5 flex flex-col items-center mx-auto text-center justify-center mt-10">
           <h1 class="text-6xl font-extrabold leading-[86px]">
-            End-to-End Travel with<br /><span class="text-[#1DD100]">P
+            End-to-End Travel with<br /><span class="text-themecolor">P
               Paribahan</span>
           </h1>
           <p class="font-inter text-lg">
@@ -73,24 +86,18 @@
             app. The integrated testing features allow for a streamlined .
           </p>
           <button
-            class="px-8 py-5 bg-[#1DD100] rounded-xl text-lg font-bold tex-[#030712] mt-8">
+            class="px-8 py-5 bg-themecolor rounded-xl text-lg font-bold tex-[#030712] mt-8">
             Buy Tickets
           </button>
         </div>
+
+
         <!-- Banner Statistic -->
         <div class="flex gap-6 mx-auto translate-y-[90%]">
           <!-- Box -->
-          <div
-            class="bg-green-600 rounded-3xl flex gap-5 py-8 px-2 w-60 relative">
-            <div>
-              <img src="./assets/icon/users-group.svg" alt />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold font-inter">500K+</h3>
-              <p>Registered Users</p>
               <!-- Main Box -->
-              <div class="absolute bottom-[3px] left-0">
-                <div class="bg-white w-60 rounded-3xl flex gap-5 py-8 px-2">
+              <div class="flex justify-center items-center">
+                <div class="bg-white w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-2 Rental partners border-b-4 border-themecolor">
                   <div>
                     <img src="./assets/icon/users-group.svg" alt />
                   </div>
@@ -100,58 +107,38 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+
+              <!-- Main Box 2 -->
+              <div class="flex justify-center items-center">
+                <div class="bg-white w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-2 border-b-4 border-themecolor ">
+                  <div>
+                    <img src="./assets/icon/ticket.svg" alt />
+                  </div>
+                  <div>
+                    <h3 class="text-4xl font-bold font-inter">1.7 lacks</h3>
+                    <p>Tickets sold</p>
+                  </div>
+                </div>
+              </div>
           <!-- Box -->
-          <div
-            class="bg-green-600 rounded-3xl flex gap-5 py-8 px-2 w-60 relative">
-            <div>
-              <img src="./assets/icon/users-group.svg" alt />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold font-inter">500K+</h3>
-              <p>Registered Users</p>
-              <!-- Main Box -->
-              <div class="absolute bottom-[3px] left-0">
-                <div class="bg-white w-60 rounded-3xl flex gap-5 py-8 px-2">
+              <!-- Main Box 3 -->
+              <div class="">
+                <div class="bg-white w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-4 border-b-4 border-themecolor">
                   <div>
-                    <img src="./assets/icon/users-group.svg" alt />
+                    <img src="./assets/icon/bus-stop.svg" alt />
                   </div>
                   <div>
-                    <h3 class="text-4xl font-bold font-inter">500K+</h3>
-                    <p>Registered Users</p>
+                    <h3 class="text-4xl font-bold font-inter">80K+</h3>
+                    <p>Rental partners</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <!-- Box -->
-          <div
-            class="bg-green-600 rounded-3xl flex gap-5 py-8 px-2 w-60 relative">
-            <div>
-              <img src="./assets/icon/users-group.svg" alt />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold font-inter">500K+</h3>
-              <p>Registered Users</p>
-              <!-- Main Box -->
-              <div class="absolute bottom-[3px] left-0">
-                <div class="bg-white w-60 rounded-3xl flex gap-5 py-8 px-2">
-                  <div>
-                    <img src="./assets/icon/users-group.svg" alt />
-                  </div>
-                  <div>
-                    <h3 class="text-4xl font-bold font-inter">500K+</h3>
-                    <p>Registered Users</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+
+
       </section>
     </header>
-    <main class="hidden">
+    <main class="">
       <!-- Ticket Coupon Section  -->
       <section class="container w-11/12 flex flex-col gap-16 mx-auto mt-48">
         <h3 class="text-4xl font-bold text-[#030712] text-center">
@@ -204,16 +191,16 @@
           </div>
         </div>
         <button
-          class="rounded-2xl border-[1px] border-[#1DD100] px-8 py-5 text-[#1DD100] font-bold text-xl w-[20%] mx-auto">
+          class="rounded-2xl border-[1px] border-themecolor px-8 py-5 text-themecolor font-bold text-xl w-[20%] mx-auto">
           See All Offers
         </button>
       </section>
 
       <!-- Ticket & Seat Section -->
-      <section class="bg-green-600 rounded-t-[88px] h-40 w-full absolute mt-20">
+      <!-- <section class="bg-green-600 rounded-t-[88px] h-[1440px] w-full absolute mt-20"> -->
         <!-- Section Start Here -->
         <section
-          class="bg-[#F7F8F8] rounded-t-[88px] relative translate-y-[2px]">
+          class="bg-[#F7F8F8] rounded-t-[88px] border-themecolor border-t-2 translate-y-[2px] mt-20">
           <div>
             <h3 class="font-bold text-center text-4xl rounded pt-28">
               P.H Paribahan
@@ -242,7 +229,7 @@
                 <div>
                   <button class="rounded-xl p-4 bg-[#1dd10026] flex gap-3">
                     <img src="./assets/icon/tabler-icon-armchair.svg" alt />
-                    <p class="font-medium font-inter text-[#1DD100] text-lg">
+                    <p class="font-medium font-inter text-themecolor text-lg">
                       <span id>40</span> Seats left
                     </p>
                   </button>
@@ -298,7 +285,7 @@
           </div>
 
         </section>
-      </section>
+      <!-- </section> -->
     </main>
     <footer class="bg-black text-white mx-auto mt-96">
       <div class="w-11/12 mx-auto container">

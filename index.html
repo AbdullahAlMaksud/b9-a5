@@ -60,7 +60,7 @@
         <div>
           <h1 class="text-4xl font-extrabold">P-Ticket</h1>
         </div>
-        <div class="flex list-none gap-12 text-lg">
+        <div class="hidden lg:flex list-none gap-12 text-lg">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Destination</a></li>
@@ -76,33 +76,33 @@
         class="bg-banner h-[550px] bg-cover bg-center mt-10 rounded-[32px] flex flex-col">
         <!-- Banner Text and Button -->
         <div
-          class="text-white w-3/5 flex flex-col items-center mx-auto text-center justify-center mt-10">
-          <h1 class="text-6xl font-extrabold leading-[86px]">
+          class="text-white lg:w-3/5 flex flex-col items-center mx-auto text-center justify-center mt-20 lg:mt-10">
+          <h1 class="text-4xl lg:text-6xl font-extrabold lg:leading-[86px]">
             End-to-End Travel with<br /><span class="text-themecolor">P
               Paribahan</span>
           </h1>
-          <p class="font-inter text-lg">
+          <p class="font-inter text-xl w-4/5 pt-5 lg:pt-0 lg:w-full lg:text-lg">
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
           <button
-            class="px-8 py-5 bg-themecolor rounded-xl text-lg font-bold tex-[#030712] mt-8">
+            class=" px-5 py-3 lg:px-8 lg:py-5 bg-themecolor rounded-xl text-lg font-bold tex-[#030712] mt-5">
             Buy Tickets
           </button>
         </div>
 
         <!-- Banner Statistic -->
-        <div class="flex gap-6 mx-auto translate-y-[90%]">
+        <div class="flex flex-row flex-wrap justify-center lg:flex-nowrap md:flex-row gap-6 mx-auto mt-8 lg:my-auto lg:translate-y-[90%]">
           <!-- Box -->
           <!-- Main Box -->
           <div class="flex justify-center items-center">
             <div
-              class="bg-white w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-2 Rental partners border-b-4 border-themecolor">
+              class="bg-white w-60 lg:w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-2 Rental partners border-b-4 border-themecolor">
               <div>
                 <img src="./assets/icon/users-group.svg" alt />
               </div>
               <div>
-                <h3 class="text-4xl font-bold font-inter">500K+</h3>
+                <h3 class="text-3xl lg:text-4xl font-bold font-inter">500K+</h3>
                 <p>Registered Users</p>
               </div>
             </div>
@@ -111,12 +111,12 @@
           <!-- Main Box 2 -->
           <div class="flex justify-center items-center">
             <div
-              class="bg-white w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-2 border-b-4 border-themecolor ">
+              class="bg-white w-60 lg:w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-2 border-b-4 border-themecolor ">
               <div>
                 <img src="./assets/icon/ticket.svg" alt />
               </div>
               <div>
-                <h3 class="text-4xl font-bold font-inter">1.7 lacks</h3>
+                <h3 class="text-3xl lg:text-4xl font-bold font-inter">1.7 lacks</h3>
                 <p>Tickets sold</p>
               </div>
             </div>
@@ -125,12 +125,12 @@
           <!-- Main Box 3 -->
           <div class>
             <div
-              class="bg-white w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-4 border-b-4 border-themecolor">
+              class="bg-white w-96 lg:w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-4 border-b-4 border-themecolor">
               <div>
                 <img src="./assets/icon/bus-stop.svg" alt />
               </div>
               <div>
-                <h3 class="text-4xl font-bold font-inter">80K+</h3>
+                <h3 class="text-3xl lg:text-4xl font-bold font-inter">80K+</h3>
                 <p>Rental partners</p>
               </div>
             </div>
@@ -141,13 +141,13 @@
     </header>
     <main class>
       <!-- Ticket Coupon Section  -->
-      <section class="container w-11/12 flex flex-col gap-16 mx-auto mt-48">
-        <h3 class="text-4xl font-bold text-[#030712] text-center">
+      <section class="container w-11/12 flex flex-col lg:gap-16 mx-auto mt-28 lg:mt-48">
+        <h3 class="text-4xl font-bold text-[#030712] text-center pb-10 lg:pb-0">
           Best offers for you
         </h3>
-        <div class="flex gap-6">
+        <div class="flex flex-col lg:flex-row gap-6">
           <!-- Coupon 1 -->
-          <div class="w-1/2 bg-[#FFBF0F] flex justify-between rounded-3xl">
+          <div class="lg:w-1/2 bg-[#FFBF0F] flex justify-between rounded-3xl">
             <div class="p-12">
               <h3 class="font-black font-inter text-[40px] text-[#030712cc]">
                 15% OFF
@@ -169,7 +169,7 @@
             </div>
           </div>
           <!-- Coupon 2 -->
-          <div class="w-1/2 bg-[#F78C9C] flex justify-between rounded-3xl">
+          <div class="lg:w-1/2 bg-[#F78C9C] flex justify-between rounded-3xl">
             <div class="p-12">
               <h3 class="font-black font-inter text-[40px] text-[#030712cc]">
                 20% OFF
@@ -186,13 +186,13 @@
             </div>
             <div
               class="flex flex-col justify-center items-center py-16 pl-2 pr-14">
-              <h3 class="font-bold text-[32px]" id>Couple 20</h3>
+              <h3 class="font-bold text-2xl lg:text-[32px]" id="">Couple 20</h3>
               <p>Coupon Code</p>
             </div>
           </div>
         </div>
         <button
-          class="rounded-2xl border-[1px] border-themecolor px-8 py-5 text-themecolor font-bold text-xl w-[20%] mx-auto">
+          class="rounded-2xl border-[1px] border-themecolor px-8 py-5 text-themecolor font-bold text-xl mt-8 lg:mt-0 lg:w-[20%] mx-auto">
           See All Offers
         </button>
       </section>
@@ -204,16 +204,16 @@
           <h3 class="font-bold text-center text-4xl rounded pt-28">
             P.H Paribahan
           </h3>
-          <p class="px-80 text-lg text-[#03071299] text-center pt-6 pb-10">
+          <p class="px-6 lg:px-80 text-lg text-[#03071299] text-center pt-6 pb-10">
             Yes, you can run unit tests and view the results directly within
             the app. The integrated testing features allow for a streamlined .
           </p>
         </div>
         <!-- Ticket Preview Section -->
         <div
-          class="bg-white w-11/12 mx-auto container rounded-3xl flex justify-between">
+          class="bg-white lg:w-11/12 mx-auto container rounded-3xl flex flex-col lg:flex-row justify-between">
           <!-- Ticket -->
-          <div class="flex flex-col justify-between w-[70%] pt-10 px-8">
+          <div class="flex flex-col justify-between lg:w-[70%] pt-10 px-8">
             <!-- Bus Name -->
             <div class="flex justify-between">
               <div class="flex gap-3">
@@ -246,30 +246,28 @@
                 <p>Departure Time</p>
                 <p>9:00 PM</p>
               </div>
-              <div class="pt-6 pb-8 flex justify-between w-[90%] mx-auto">
+              <div class="pt-6 pb-8 flex flex-col gap-2 lg:flex-row justify-between w-[90%] mx-auto">
                 <button
                   class="px-4 bg-[#0307120d] rounded-xl py-5 font-inter font-medium text-base">Boarding
                   Point - Laxmipur</button>
                 <button
-                  class="px-4 bg-[#0307120d] rounded-xl py-5 font-inter font-medium text-base">Boarding
-                  Point - Laxmipur</button>
+                  class="px-4 bg-[#0307120d] rounded-xl py-5 font-inter font-medium text-base">Dropping Point - Bogura</button>
                 <button
-                  class="px-4 bg-[#0307120d] rounded-xl py-5 font-inter font-medium text-base">Boarding
-                  Point - Laxmipur</button>
+                  class="px-4 bg-[#0307120d] rounded-xl py-5 font-inter font-medium text-base">Est. Time - 11 Hour</button>
               </div>
             </div>
           </div>
           <!-- Divider -->
           <div>
-            <img src="./assets/icon/ticket-divider.svg" alt />
+            <img class="h-full hidden lg:flex" src="./assets/icon/ticket-divider.svg" alt />
           </div>
           <!-- Ticket Price -->
-          <div class="flex flex-col justify-center items-center pr-20">
+          <div class="flex flex-col justify-center items-center lg:pr-20 pb-10 lg:pb-0">
             <img
               src="./assets/icon/tabler-icon-coin-taka-filled.svg"
               alt />
             <p class="font-bold text-3xl text-[#030712] text-center">
-              <span id>500</span> Taka
+              <span id>550</span> Taka
             </p>
             <p class="font-semibold text-2xl text-center text-[#03071299]">
               Per seat
@@ -278,9 +276,9 @@
         </div>
         <!-- SEAT SELECTION OR MAIN SECTION START HERE -->
         <div
-          class="mt-8 bg-white w-11/12 mx-auto container rounded-3xl flex justify-between">
+          class="mt-8 bg-white lg:w-11/12 mx-auto container rounded-3xl flex flex-col lg:flex-row justify-between">
           <!-- /////Seat Section////// -->
-          <div class="w-3/5">
+          <div class="lg:w-3/5">
             <h2
               class="pt-8 pb-6 mx-8 border-b-2 border-dashed text-[#030712] text-2xl font-semibold">
               Select Your Seat
@@ -379,7 +377,7 @@
           </div>
 
           <!-- Output And Calculation -->
-          <div class="w-2/5 font-inter">
+          <div class="lg:w-2/5 font-inter">
             <h2
               class="pt-8 pb-6 mx-8 border-b-2 border-dashed text-[#030712] text-2xl font-semibold">
               Select Your Seat

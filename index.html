@@ -54,26 +54,42 @@
   </script>
   </head>
   <body class="font-raleway">
-    <header class="container w-11/12 mx-auto mt-8">
-      <!-- Navbar -->
-      <nav class="flex justify-between items-center">
-        <div>
-          <h1 class="text-4xl font-extrabold">P-Ticket</h1>
+    
+      <!-- NAVBAR -->
+      <div class="navbar bg-base-100 container mx-auto md:w-11/12 mt-8">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl md:text-2xl lg:text-4xl font-extrabold">P-Ticket</a>
         </div>
-        <div class="hidden lg:flex list-none gap-12 text-lg">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Destination</a></li>
-          <li><a href="#">Search</a></li>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 gap-12 text-lg">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
         </div>
-        <button onclick="location.href='#ticket-and-seat-section'"
-          class="flex gap-2 items-center border-[1px] border-[#1dd10066] bg-[#1dd1001a] px-8 py-4 rounded-md text-themecolor font-bold text-xl">
+        <div class="navbar-end">
+          <button onclick="location.href='#ticket-and-seat-section'"
+          class="flex gap-2 items-center border-2 border-[#1dd10066] bg-[#1dd1001a] px-4 py-2 md:px-8 md:py-4 rounded-md text-themecolor font-bold text-xl hover:bg-transparent">
           Bus<img src="./assets/icon/small-bus.svg" alt />
         </button>
-      </nav>
+        </div>
+      </div>
+    <header class="container w-11/12 mx-auto mt-0">
       <!-- Banner Section -->
       <section
-        class="bg-banner h-[550px] bg-cover bg-center mt-10 rounded-[32px] flex flex-col">
+        class="bg-banner h-[550px] bg-cover bg-center mt-8 rounded-[32px] flex flex-col">
         <!-- Banner Text and Button -->
         <div
           class="text-white lg:w-3/5 flex flex-col items-center mx-auto text-center justify-center mt-20 lg:mt-10">
@@ -125,7 +141,7 @@
           <!-- Main Box 3 -->
           <div class>
             <div
-              class="bg-white w-96 lg:w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-4 border-b-4 border-themecolor">
+              class="bg-white w-60 md:w-96 lg:w-72 rounded-3xl flex justify-center items-center gap-6 py-8 px-4 border-b-4 border-themecolor">
               <div>
                 <img src="./assets/icon/bus-stop.svg" alt />
               </div>
@@ -141,21 +157,21 @@
     </header>
     <main class>
       <!-- Ticket Coupon Section  -->
-      <section class="container w-11/12 flex flex-col lg:gap-16 mx-auto mt-28 lg:mt-48">
+      <section class="container w-11/12 flex flex-col lg:gap-16 mx-auto mt-[26rem] lg:mt-48">
         <h3 class="text-4xl font-bold text-[#030712] text-center pb-10 lg:pb-0">
           Best offers for you
         </h3>
         <div class="flex flex-col lg:flex-row gap-6">
           <!-- Coupon 1 -->
-          <div class="lg:w-1/2 bg-[#FFBF0F] flex justify-between rounded-3xl">
-            <div class="p-12">
-              <h3 class="font-black font-inter text-[40px] text-[#030712cc]">
+          <div class="lg:w-1/2 bg-[#FFBF0F] flex justify-between rounded-3xl items-center">
+            <div class="p-6 md:p-12">
+              <h3 class="font-black font-inter text-2xl  md:text-[40px] text-[#030712cc]">
                 15% OFF
               </h3>
-              <p class="font-inter text-xl text-[#030712cc] font-semibold">
+              <p class="font-inter md:text-xl text-[#030712cc] font-semibold">
                 on your next purchase
               </p>
-              <p class="font-inter text-lg font-medium text-[#03071280]">
+              <p class="font-inter md:text-lg font-medium text-[#03071280]">
                 use by January 2024
               </p>
             </div>
@@ -163,21 +179,21 @@
               <img src="./assets/icon/cupon-devider.svg" alt />
             </div>
             <div
-              class="flex flex-col justify-center items-center py-16 pl-2 pr-14">
-              <h3 class="font-bold text-[32px]" id="new-coupon">NEW15</h3>
-              <p>Coupon Code</p>
+              class="flex flex-col justify-center items-center md:py-16 pl-2 pr-6 md:pr-24 lg:pr-14">
+              <h3 class="font-bold text-2xl md:text-[32px]" id="new-coupon">NEW15</h3>
+              <p class="text-center">Coupon Code</p>
             </div>
           </div>
           <!-- Coupon 2 -->
-          <div class="lg:w-1/2 bg-[#F78C9C] flex justify-between rounded-3xl">
-            <div class="p-12">
-              <h3 class="font-black font-inter text-[40px] text-[#030712cc]">
+          <div class="lg:w-1/2 bg-[#F78C9C] flex justify-between rounded-3xl items-center">
+            <div class="p-6 md:p-12">
+              <h3 class="font-black font-inter text-2xl md:text-[40px] text-[#030712cc]">
                 20% OFF
               </h3>
-              <p class="font-inter text-xl text-[#030712cc] font-semibold">
+              <p class="font-inter md:text-xl text-[#030712cc] font-semibold">
                 on your next purchase
               </p>
-              <p class="font-inter text-lg font-medium text-[#03071280]">
+              <p class="font-inter md:text-lg font-medium text-[#03071280]">
                 use by January 2024
               </p>
             </div>
@@ -185,9 +201,9 @@
               <img src="./assets/icon/cupon-devider.svg" alt />
             </div>
             <div
-              class="flex flex-col justify-center items-center py-16 pl-2 pr-14">
-              <h3 class="font-bold text-2xl lg:text-[32px]" id="couple-coupon">Couple 20</h3>
-              <p>Coupon Code</p>
+              class="flex flex-col justify-center items-center md:py-16 pl-2 pr-4 md:pr-20 lg:pr-14">
+              <h3 class="font-bold text-xl md:text-3xl text-center lg:text-[32px]" id="couple-coupon">Couple 20</h3>
+              <p class="text-center">Coupon Code</p>
             </div>
           </div>
         </div>
@@ -221,7 +237,7 @@
                   <img src="./assets/icon/bus-logo.svg" alt />
                 </div>
                 <div>
-                  <h3>Greenline Paribahan</h3>
+                  <h3 class="text-right">Greenline Paribahan</h3>
                   <p>Coach-009-WEB ! AC_Business</p>
                 </div>
               </div>
@@ -235,7 +251,7 @@
               </div>
             </div>
             <!-- Ticket Details -->
-            <div class="bg-[#F7F8F8] rounded-3xl mb-8">
+            <div class="bg-[#F7F8F8] rounded-3xl mb-8 lg:mt-8">
               <div
                 class="border-b-2 border-dashed w-[90%] mx-auto flex justify-between py-6">
                 <p>Route</p>
@@ -258,9 +274,10 @@
             </div>
           </div>
           <!-- Divider -->
-          <div>
+          <div class="">
             <img class="h-full hidden lg:flex" src="./assets/icon/ticket-divider.svg" alt />
           </div>
+          
           <!-- Ticket Price -->
           <div class="flex flex-col justify-center items-center lg:pr-20 pb-10 lg:pb-0">
             <img
@@ -494,7 +511,7 @@
     <div class="modal-action">
       <form method="dialog">
         <!-- if there is a button in form, it will close the modal -->
-        <button onclick="location.reload(true)" class="btn bg-themecolor text-white font-semibold px-16 rounded-full hover:bg-themecolor active:scale-95">Continue</button>
+<button onclick="location.reload(true)" class="btn bg-themecolor text-white font-semibold px-16 rounded-full hover:bg-themecolor active:scale-95">Continue</button>
       </form>
     </div>
   </div>

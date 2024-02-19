@@ -7,11 +7,11 @@ const selectedSeatArray = [];
 
 for (const seat of seats) {
     seat.addEventListener('click', function (e) {
-        
+
         // console.log('Bhai AMi Assi')
         const seatNumber = e.target.innerText;
         if (!selectedSeatArray.includes(seatNumber)) {
-           
+
             if (selectedSeatArray.length >= 4) {
                 alert('তুমি সীমা লঙ্ঘন করিতেছো');
                 return;
@@ -33,14 +33,14 @@ for (const seat of seats) {
             <td class="text-right px-0" id="selected-price">${ticketPrice}</td>
           </tr>`
 
-          ticketDisplay.appendChild(ticketDisplayElement);
-          const selectedPrice = parseInt(document.getElementById('selected-price').innerText);
-          selectedTotalPrice = selectedTotalPrice + selectedPrice;
+            ticketDisplay.appendChild(ticketDisplayElement);
+            const selectedPrice = parseInt(document.getElementById('selected-price').innerText);
+            selectedTotalPrice = selectedTotalPrice + selectedPrice;
 
 
         }
-        else{
-            e.target.classList.remove('bg-themecolor');
+        else {
+            e.target.classList.toggle('bg-themecolor');
         }
         console.log(selectedSeatArray);
 

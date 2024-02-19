@@ -3,7 +3,6 @@ let seatCount = parseInt(document.getElementById('seat-count-indicator').innerTe
 let seatRemain = parseInt(document.getElementById('remaining-seat').innerText);
 const ticketPrice = parseInt(document.getElementById('ticket-price').innerText);
 let selectedTotalPrice = 0;
-
 const selectedSeatArray = [];
 
 for (const seat of seats) {
@@ -33,17 +32,30 @@ for (const seat of seats) {
             <td>Economy</td>
             <td class="text-right px-0" id="selected-price">${ticketPrice}</td>
           </tr>`
-            ticketDisplay.appendChild(ticketDisplayElement);
+
+          ticketDisplay.appendChild(ticketDisplayElement);
+          const selectedPrice = parseInt(document.getElementById('selected-price').innerText);
+          selectedTotalPrice = selectedTotalPrice + selectedPrice;
+
+
         }
         else{
             e.target.classList.remove('bg-themecolor');
         }
         console.log(selectedSeatArray);
 
-        const selectedPrice = parseInt(document.getElementById('selected-price').innerText);
-        selectedTotalPrice = selectedTotalPrice + selectedPrice;
+
+
+
+
+
+
         setInnerText('total-price', selectedTotalPrice);
         setInnerText('grand-price', selectedTotalPrice);
+
+
+
+
 
 
         const coupleCoupon = textReadyToCompare('couple-coupon');

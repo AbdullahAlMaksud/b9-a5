@@ -7,8 +7,6 @@ const selectedSeatArray = [];
 
 for (const seat of seats) {
     seat.addEventListener('click', function (e) {
-
-        // console.log('Bhai AMi Assi')
         const seatNumber = e.target.innerText;
         if (!selectedSeatArray.includes(seatNumber)) {
 
@@ -17,13 +15,11 @@ for (const seat of seats) {
                 return;
             }
             selectedSeatArray.push(seatNumber);
-            e.target.classList.toggle('bg-themecolor');
+            e.target.classList.add('bg-themecolor');
             seatCount = selectedSeatArray.length;
             setInnerText('seat-count-indicator', seatCount);
             seatRemain = 40 - selectedSeatArray.length;
             setInnerText('remaining-seat', seatRemain);
-
-
 
             const ticketDisplayElement = document.createElement('tr');
             const ticketDisplay = document.getElementById('price-display');
@@ -32,12 +28,28 @@ for (const seat of seats) {
             <td>Economy</td>
             <td class="text-right px-0" id="selected-price">${ticketPrice}</td>
           </tr>`
-
             ticketDisplay.appendChild(ticketDisplayElement);
             const selectedPrice = parseInt(document.getElementById('selected-price').innerText);
             selectedTotalPrice = selectedTotalPrice + selectedPrice;
+        }
 
+        else if (selectedSeatArray.includes(seatNumber)) {
+            if (selectedSeatArray.length >= 4) {
+                alert('At a time you can select Maximum 4 Seat.');
+                return;
+            }
+            selectedSeatArray.pop(seatNumber);
+            e.target.classList.remove('bg-themecolor');
+            seatCount = selectedSeatArray.length;
+            setInnerText('seat-count-indicator', seatCount);
+            seatRemain = 40 - selectedSeatArray.length;
+            setInnerText('remaining-seat', seatRemain);
 
+            const ticketDisplayElement = document.createElement('tr');
+            const ticketDisplay = document.getElementById('price-display');
+            ticketDisplay.removeChild(ticketDisplayElement);
+            const selectedPrice = parseInt(document.getElementById('selected-price').innerText);
+            selectedTotalPrice = selectedTotalPrice + selectedPrice;
         }
         else {
             e.target.classList.toggle('bg-themecolor');
@@ -45,19 +57,8 @@ for (const seat of seats) {
         console.log(selectedSeatArray);
 
 
-
-
-
-
-
         setInnerText('total-price', selectedTotalPrice);
         setInnerText('grand-price', selectedTotalPrice);
-
-
-
-
-
-
         const coupleCoupon = textReadyToCompare('couple-coupon');
         const newCoupon = textReadyToCompare('new-coupon');
         const couponInput = document.getElementById('coupon-input');
@@ -73,7 +74,7 @@ for (const seat of seats) {
                     document.getElementById('coupon-apply-section').classList.add('hidden');
                 })
             }
-            else if (inputText == newCoupon && parseInt(seatCount) >= 2) {
+            else if (inputText == newCoupon && parseInt(seatCount) >= 4) {
                 const applyButton = document.getElementById('apply-button');
                 applyButton.removeAttribute('disabled');
                 applyButton.addEventListener('click', function () {
@@ -90,22 +91,6 @@ for (const seat of seats) {
 
     })
 }
-
-
-////////////////////////////////////////
-/**
- * একটা সিট একবার সিলেক্ট করতে হবে।
- * দ্বিতীয়বার ওইসিটে ক্লিক করলে সেটা বাতিল হয়ে যাবে।
- * 
- * 
- * নেক্সট বাটনে ক্লিক করলে সব সরে গিয়ে নতুন উইন্ডো আসবে।
- * নতুন উইন্ডোর কন্টিনিউউ বাটনে ক্লিক করলে আবার এই উইন্ডো আসবে।
- * সিট চারটার বেশি সিলেক্ট করা যাবে না।
- * চারটা সিট সিলেক্ট করার পর, +কুপন দিলে বাটন অ্যাকটিভ হবে। সিট চারটা না হলে কুপনে কাজ হবে না।
- * কুপনের বাটনে ক্লিক করলে ২০ বা ১৫ পারসেন্ট মাইনাস হয়ে গ্রান্ড প্রাইসে বসবে।
- * একেক কুপনের জন্য একেক প্রাইস ডিসকাউন্ট হবে।
- */
-/////////////////////////////////
 
 const phoneNumberInputField = document.getElementById('phone-number');
 phoneNumberInputField.addEventListener('input', function () {

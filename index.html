@@ -64,9 +64,9 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Destination</a></li>
-          <li><a href>Search</a></li>
+          <li><a href="#">Search</a></li>
         </div>
-        <button
+        <button onclick="location.href='#ticket-and-seat-section'"
           class="flex gap-2 items-center border-[1px] border-[#1dd10066] bg-[#1dd1001a] px-8 py-4 rounded-md text-themecolor font-bold text-xl">
           Bus<img src="./assets/icon/small-bus.svg" alt />
         </button>
@@ -85,7 +85,7 @@
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
-          <button
+          <button onclick="location.href='#ticket-section'"
             class=" px-5 py-3 lg:px-8 lg:py-5 bg-themecolor rounded-xl text-lg font-bold tex-[#030712] mt-5">
             Buy Tickets
           </button>
@@ -198,7 +198,7 @@
       </section>
 
       <!-- Ticket & Seat Section -->
-      <section
+      <section id="ticket-and-seat-section"
         class="bg-[#F7F8F8] rounded-t-[88px] border-themecolor border-t-2 translate-y-[2px] mt-20 pb-36">
         <div>
           <h3 class="font-bold text-center text-4xl rounded pt-28">
@@ -213,7 +213,7 @@
         <div
           class="bg-white lg:w-11/12 mx-auto container rounded-3xl flex flex-col lg:flex-row justify-between">
           <!-- Ticket -->
-          <div class="flex flex-col justify-between lg:w-[70%] pt-10 px-8">
+          <div id="ticket-section" class="flex flex-col justify-between lg:w-[70%] pt-10 px-8">
             <!-- Bus Name -->
             <div class="flex justify-between">
               <div class="flex gap-3">
@@ -416,8 +416,8 @@
               </div>
 
               <!-- Coupon and button -->
-              <div
-                class="flex justify-between mt-5 bg-white py-4 px-3 rounded-xl">
+              <div id="coupon-apply-section"
+                class="flex justify-between mt-5 bg-white py-2 px-2 rounded-xl">
                 <input id="coupon-input" type="text" placeholder="Have any coupon?"
                   class="focus:border-none focus:outline-none ml-4 bg-transparent" />
                 <button id="apply-button"
@@ -429,7 +429,7 @@
               <div
                 class="flex justify-between pt-6 font-medium text-base">
                 <p>Grand Price</p>
-                <p>BDT <span>0</span></p>
+                <p>BDT <span id="grand-price">0</span></p>
               </div>
 
             </div>
@@ -441,7 +441,7 @@
               <input id="phone-number" class="px-6 py-5 border-[1px] w-full rounded-xl my-3 bg-transparent" type="text" placeholder="Enter your phone number" required>
               <p class="font-bold">Email ID</p>
               <input class="px-6 py-5 border-[1px] w-full rounded-xl my-3 bg-transparent" placeholder="Enter your email id">
-              <button id="next-button" class="py-4 w-full bg-themecolor text-white font-bold rounded-md disabled:bg-slate-800" disabled>Next</button>
+              <button id="next-button" onclick="my_modal_1.showModal()" class="py-4 w-full bg-themecolor text-white font-bold rounded-md disabled:bg-slate-800" disabled>Next</button>
             </div>
             <div class="flex justify-evenly underline py-4 pb-8">
               <a href="#">Terms and Conditions</a>
@@ -454,10 +454,10 @@
     <footer class="bg-black text-white mx-auto">
       <div class="w-11/12 mx-auto container">
         <div
-          class="flex justify-between items-center pt-32 pb-12 border-b-[1px] border-dashed">
+          class="flex flex-col justify-center lg:flex-row lg:justify-between text-center items-center pt-16 lg:pt-32 pb-12 border-b-[1px] border-dashed gap-8">
           <div>
-            <h3 class="font-extrabold text-4xl pb-6">P-Ticket</h3>
-            <p class="font-inter text-lg w-3/5 opacity-80">P-Ticket is a digital
+            <h3 class="font-extrabold text-4xl pb-6 lg:text-left">P-Ticket</h3>
+            <p class="font-inter text-lg lg:w-3/5 opacity-80 lg:text-left">P-Ticket is a digital
               platform to make your daily commuting better.</p>
           </div>
           <div>
@@ -466,7 +466,7 @@
               class="hover:cursor-pointer" alt>
           </div>
         </div>
-          <div class="flex justify-between items-center pb-32 pt-8">
+          <div class="flex flex-col-reverse gap-10 md:gap-0 lg:flex-row justify-between items-center pb-16 lg:pb-32 pt-8 text-center">
             <div>
               <p class="opacity-70">@all rights reserved, P-Ticket services
                 limited.2024</p>
@@ -481,6 +481,25 @@
         </div>
       </div>
     </footer>
+
+
+
+    <!--  -->
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box py-10 flex flex-col items-center justify-center">
+    <img src="./assets/icon/tick-round.svg" alt="">
+    <h3 class="font-bold text-lg uppercase text-themecolor">Success</h3>
+    <p class="py-4 px-6 font-bold text-gray-600 text-center">Thank you for Booking Our Bus Seats.<br>We are working hard to find the best service and deals for you.</p>
+    <p class="text-center font-light">Shortly you will find a confirmation in your email.</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button onclick="location.reload(true)" class="btn bg-themecolor text-white font-semibold px-16 rounded-full hover:bg-themecolor active:scale-95">Continue</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

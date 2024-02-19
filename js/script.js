@@ -13,7 +13,7 @@ for (const seat of seats) {
         if (!selectedSeatArray.includes(seatNumber)) {
 
             if (selectedSeatArray.length >= 4) {
-                alert('তুমি সীমা লঙ্ঘন করিতেছো');
+                alert('At a time you can select Maximum 4 Seat.');
                 return;
             }
             selectedSeatArray.push(seatNumber);

@@ -80,7 +80,7 @@ for (const seat of seats) {
                     document.getElementById('coupon-apply-section').classList.add('hidden');
                 })
             }
-            else if(inputText.length>5){
+            else if(inputText.length>9){
               alert('Your Coupon is Not Valid');
               document.getElementById('apply-button').disabled = true;
             }

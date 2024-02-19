@@ -58,7 +58,7 @@ for (const seat of seats) {
         const newCoupon = document.getElementById('new-coupon').innerText;
         const coupleCoupon = document.getElementById('couple-coupon').innerText;
         const couponInput = document.getElementById('coupon-input');
-        couponInput.addEventListener('input', function () {
+        couponInput.addEventListener('input', function (e) {
             const inputText = couponInput.value;
             if (inputText == coupleCoupon && parseInt(seatCount) >= 4) {
                 const applyButton = document.getElementById('apply-button');
@@ -80,9 +80,11 @@ for (const seat of seats) {
                     document.getElementById('coupon-apply-section').classList.add('hidden');
                 })
             }
-            else {
-                document.getElementById('apply-button').disabled = true;
+            else if(inputText.length>5){
+              alert('Your Coupon is Not Valid');
+              document.getElementById('apply-button').disabled = true;
             }
+            
         })
 
         if (selectedSeatArray.length > 0) {
